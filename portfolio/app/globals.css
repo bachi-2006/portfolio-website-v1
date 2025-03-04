@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 224 71% 4%;
+  --foreground: 213 31% 91%;
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 1.2%;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-purple-600;
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: theme("colors.purple.500") theme("colors.gray.900");
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: theme("colors.gray.900");
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: theme("colors.purple.500");
+  border-radius: 20px;
+  border: 3px solid theme("colors.gray.900");
+}
+
